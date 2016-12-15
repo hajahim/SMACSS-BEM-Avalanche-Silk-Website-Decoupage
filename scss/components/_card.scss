@@ -1,0 +1,201 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: map-get($background-color, background-content);
+  border: 1px solid map-get($background-color, primary);
+  font-size: map-get($font-size, medium);
+  position: relative;
+  margin-bottom: 20px;
+  height: 340px;
+  &__image {
+    height: 180px;
+    display: block;
+  }
+  &__category {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 16px 20px 0 20px;
+    color: map-get($background-color, background-content);
+  }
+  &__body {
+    padding: 18px 20px;
+    line-height: map-get($line-height, normal);
+    &__title {
+      font-family: $font-slave-bold;
+      font-size: map-get($font-size, larger);
+      margin-bottom: 8px;
+      &__link {
+        color: map-get($text-color, primary);
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    &__text {
+      color: map-get($text-color, secondary);
+    }
+  }
+  &__meta {
+    font-size: map-get($font-size, normal);
+    border-top: 1px solid map-get($border-color, base-border);
+    list-style: none;
+    padding: 4px 20px;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      & > .link:hover {
+        color: map-get($text-color, primary);
+      }
+    }
+  }
+}
+
+.card--cover {
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: map-get($background-color, background-content); 
+  background-color: map-get($background-color, secondary-blue);
+  .card__category {
+    position: relative;
+    margin-top: 0;
+    order: 0;
+  }
+  .card__body {
+    padding-top: 0;
+    padding-bottom: 0;
+    order: 1;
+    &__title {
+      font-family: $font-fantasy;
+      font-size: map-get($font-size, mlarger);
+      line-height: map-get($line-height, very-extended);
+      padding-top: 7px;
+      &__link {
+        color: map-get($background-color, background-content); 
+      }
+    }
+  }
+  .card__image {
+    padding: 8px 36px 22px 42px;
+    height: auto;
+    order: 2;
+  }
+  .card__button {
+    order: 3;
+    & > .btn {
+      letter-spacing: 0;
+    }
+  }
+  &:hover {
+    transition: transform 3s;
+    transform: rotateY(360deg);
+  }
+}
+
+.card--large {
+  .card__body {
+    margin-top: 70px;
+    padding-top: 0;
+    width: 45%;
+    &__title {
+      font-family: $font-fantasy;
+      font-size: map-get($font-size, largest);
+      line-height: map-get($line-height, extra-extended);
+      margin-bottom: 15px;
+    }
+  }
+  .card__image {
+    float: right;
+    height: 100%;
+    width: 50%;
+  }
+  .card__category {
+    color: map-get($text-color, meta-orange);
+    margin: 0;
+    margin-bottom: 4px;
+    position: relative;
+  }
+  .card__meta {
+    border: none;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 12px;
+    &__item {
+      padding-right: 20px;
+    }
+  }
+}
+
+.card--author {
+  .card__image {
+    height: 337px;
+  }
+  .card__body {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &__title {
+      padding: 0 20px;
+      &__link {
+        color: map-get($background-color, background-content);
+      }
+    }
+    &__text {
+      color: map-get($background-color, background-content);
+      padding: 0 20px 21px 20px;
+    }
+  }
+  .card__author {
+    background-color: map-get($background-color, background-content);
+    line-height: map-get($line-height, shrink);
+    padding: 5px 20px;
+    display: flex;
+    &__image {
+      margin-top: 4px;
+    }
+    &__content {
+      padding-left: 5px;
+      &__name {
+        font-family: $font-slave-bold;
+        font-size: map-get($font-size, medium);
+        color: map-get($text-color, color-darkest);
+      }
+      &__date {
+        font-size: map-get($font-size, normal);
+        color: map-get($text-color, secondary);
+      }
+    }
+  }
+}
+
+.card--img-small {
+  .card__body {
+    padding: 0 30px;
+    margin-top: 60px;
+    width: 300px;
+    &__title {
+      font-family: $font-slave-bold;
+      margin-bottom: 10px;
+    }
+    &__text {
+      width: 90%;
+    }
+  }
+  .card__image {
+    width: 220px;
+  }
+  .card__category {
+    color: map-get($text-color, meta-blue);
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,47 @@
+.news {
+  background-color: map-get($background-color, background-content);
+  line-height: map-get($line-height, shrink);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  &__info {
+    font-size: map-get($font-size, normal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 9px 20px;
+    border-bottom: 1px solid map-get($border-color, base-border-lighter);
+  }
+  &__list {
+    padding: 20px 20px 15px 20px;
+    &__item {
+      border-bottom: 1px solid map-get($border-color, base-border-lighter);
+      &__body {
+        line-height: map-get($line-height, shrink);
+        &__date {
+          color: map-get($text-color, secondary);  
+          font-family: $font-slave-regular;
+          font-size: map-get($font-size, small);
+          padding: 5px 0 5px 0;
+        }
+        &__title {
+          font-family: $font-slave-bold;
+          font-size: map-get($font-size, large);
+          line-height: map-get($line-height, shrink);
+          padding-bottom: 18px;
+          width: 95%;
+          &__link:hover {
+            color: map-get($text-color, color-darkest);
+          }
+        }
+      }
+    }
+  }
+  &__link {
+    background-color: map-get($text-color, primary);
+    font-family: $font-slave-bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    display: block;
+  }
+}

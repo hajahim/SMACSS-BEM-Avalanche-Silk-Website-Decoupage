@@ -1,0 +1,40 @@
+header.l-header
+    section.header__banner
+      .box
+        .grid
+          .header__banner__info.grid__cell(class="1/4")
+            .m-meteo
+              +meteo({
+                image: "cloud.png",
+                image_width: 40,
+                image_height: 27,
+                country: "new york, ny",
+                temperature: "74°F",
+                date: "Sunday, September 3, 2015"
+              })
+
+          .header__banner__logo.grid__cell(class="2/4")
+            .m-logo
+              a.logo__image(href="#") 
+                img(src=srcImage+"silk-logo.png" alt="alternative text" height="40" width="120")
+
+          .header__banner__registration.grid__cell(class="1/4")
+            a.btn.btn--info.btn--rounded(href="#")
+              span.icon.icon--user
+              | log in
+    section.header__navigation
+      .box
+        .grid
+          .grid__cell(class="1/1")
+            +navigation([
+              "news",
+              "style",
+              "food & drink",
+              "travel",
+              "sport",
+              "cars & moto",
+              "culture",
+              "video",
+              "archive",
+              "<span class='icon icon--search'></span>"  
+            ])

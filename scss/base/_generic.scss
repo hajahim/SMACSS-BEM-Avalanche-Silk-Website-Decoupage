@@ -1,0 +1,16 @@
+
+html {
+  box-sizing: border-box;
+  font-family: $font-master;
+  font-size: 100%;
+  line-height: 1;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}

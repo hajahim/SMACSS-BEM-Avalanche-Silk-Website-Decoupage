@@ -1,0 +1,35 @@
+.m-video {
+  background-color: map-get($background-color, background-content-dark);
+  padding: 12px 0;
+}
+
+.video {
+  color: map-get($text-color, color-white);
+  padding: 10px 0;
+  &__caption {
+    color: map-get($text-color, color-white);
+    font-family: $font-slave-bold;
+    font-size: map-get($font-size, normal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &__object {
+    position: relative;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    &__title {
+      font-family: $font-slave-bold;
+      font-size: map-get($font-size, large);
+      &__link {
+       color: map-get($text-color, color-white);
+      }
+    }
+    &__description {
+      color: map-get($text-color, secondary-dark);
+      font-size: map-get($font-size, medium);
+    }
+  }
+} 

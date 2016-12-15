@@ -1,0 +1,205 @@
+extends ../_base/layout.pug
+
+block head
+  - var title = 'Home'
+
+block main
+  main.l-container
+    section.m-banner.box
+      .grid
+        .grid__cell(class="1/1")
+          +banner([
+            {
+              image: "narwhal_cosby_sea.png",
+              image_width: 980,
+              image_height: 500,
+              title: "Hella narwhal Cosby swea.",
+              text: "A few years ago, the Roots were musing over how to make their music-industry career pay."
+            }
+          ])
+    .box
+      section.grid
+        section.m-card.grid__cell(class="3/4")
+          .grid
+            .grid__cell(class="3/3")
+              +card("card card--large", {
+                image: "red_car.png",
+                image_alt: "alternative text",
+                image_width: 365,
+                image_height: 340,
+                category_tag: true,
+                category: "cars & moto",
+                title: "The 2015 Best-Dressed List: How Kate Middleton",
+                text: "Aenean lacinia bibendum nulla sed consectetur. Anean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vetsibulum",
+                card_meta: {
+                  like: 273,
+                  comment: 23,
+                  date: "3 hours"
+                }
+              })
+
+            .grid__cell(class="1/3")
+              +card("card card--cover", {
+                image: "portails_stars.png",
+                image_alt: "alternative text",
+                image_width: 188,
+                image_height: 188,
+                category_tag: true,
+                category: "style",
+                title: "Offbeat Portraits Give Stars",
+                readmore: true,
+                readmore_link: "#"
+              })
+            
+            .grid__cell(class="1/3")
+              +card("card", {
+                image: "minesota_best.png",
+                image_alt: "Alternative text",
+                image_width: 230,
+                image_height: 185,
+                category_tag: true,
+                category_bordered: true,
+                category: "Travel",
+                title: "Best of Minnesota 2015: Revealing what rocks",
+                text: "I whipped the Scotch tape from my pocket and said",
+                card_meta : {
+                  like: 298,
+                  comment: 12,
+                  date: "5 hours"
+              }
+              })
+
+            .grid__cell(class="1/3")
+              +card("card card--author", {
+                img_dark: true,
+                image: "trim_control_moustache.png",
+                image_alt: "alternative text",
+                image_width: 230,
+                image_height: 290,
+                category_tag: true,
+                category_bordered: true,
+                category: "culture",
+                title: "How to Trim Your Out of Control Mustache",
+                text: "I whipped the Scotch tape from my pocket and said",
+                card_author: {
+                  authorImage: "jason_george.png",
+                  authorName: "Jason George",
+                  date: "7 hours"
+                }
+              })
+
+        aside.m-news.grid__cell(class="1/4")
+          +news("news", [
+            {
+              image: "preview_hell_on_wheels.png",
+              image_width: 190,
+              image_height: 133,
+              date: "2 hours",
+              title: "Exclusive Hell on Wheels Season 5 Episode 5 Preview Scene"
+            },
+            {
+              date: "7 hours",
+              title: "The 2015 Post-San Diego Comic Con Guide"
+            },
+            {
+              date: "9 hours",
+              title: "Dear Apple, We Need To Talk About Your Ridiculous iPhone Chargers"
+            },
+            {
+              date: "1 day",
+              title: "If You Ask Siri What 0 Divided By 0 Is It Gets Brutal"
+            },
+            {
+              date: "1 day",
+              title: "Dr. Dre Compton Review: A Grand Finale Game Changer"
+            }
+          ])
+
+      section.m-card.grid
+        .grid__cell(class="2/4")
+          +card("card card--large card--img-small", {
+            image: "side_chair.png",
+            image_alt: "alternative text",
+            image_width: 180,
+            image_height: 338,
+            category_tag: true,
+            category: "style",
+            title: "Eames Molded Fiberglass Side Chair",
+            text: "The Eames Molded Fiberglass Side Chair with Wire Base is an iconic piece of American design history."
+
+          })
+        .grid__cell(class="1/4")
+          +card("card", {
+            image: "minesota_2015.png",
+            image_alt: "",
+            image_width: 230,
+            image_height: 185,
+            category_tag: true,
+            category_bordered: true,
+            category: "travel",
+            title: "Best of Minnesota 2015: Revealing what rocks",
+            text: "I whipped the Scotch tape from my pocket and said",
+            card_meta : {
+              like: 308,
+              comment: 34,
+              date: "1 day"
+            }
+          })
+        .grid__cell(class="1/4")
+          +card("card", {
+            image: "hemingway_personal_letters.png",
+            image_alt: "",
+            image_width: 230,
+            image_height: 185,
+            category_tag: true,
+            category_bordered: true,
+            category: "travel",
+            title: "Reading Hemingway's Personal Letters",
+            text: "There isn't much that hasn't been said about Ernest Miller",
+            card_meta : {
+              like: 471,
+              comment: 89,
+              date: "2 day"
+            }
+          })
+
+      
+    section.m-video
+      .box
+        h3.video__caption video
+        .grid
+          .grid__cell(class="1/4")
+            +video({
+              link: "big_black_book_spring.png",
+              video_width: 230,
+              video_height: 130,
+              title: "The Big Black Book Spring",
+              duration: "12:00"
+            })
+          .grid__cell(class="1/4")
+            +video({
+              link: "behind_the_scene.png",
+              video_width: 230,
+              video_height: 130,
+              title: "Behind The Scenes Video",
+              duration: "12:00"
+            })
+          .grid__cell(class="1/4")
+            +video({
+              link: "michelin_french.png",
+              video_width: 230,
+              video_height: 130,
+              title: "Michelin-Starred French",
+              duration: "12:00"
+            })
+          .grid__cell(class="1/4")
+            +video({
+              link: "smartwach_wars.png",
+              video_width: 230,
+              video_height: 130,
+              title: "The Smartwatch Wars",
+              duration: "12:00"
+            })
+
+
+    

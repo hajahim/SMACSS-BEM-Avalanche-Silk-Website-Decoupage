@@ -1,0 +1,11 @@
+.m-logo {
+  .logo__image {
+    text-align: center;
+  }
+  .logo__information {
+    font-family: $font-slave-regular;
+    line-height: map-get($line-height, extended);
+    padding-top: 26px;
+    padding-right: 90px;
+  }
+}

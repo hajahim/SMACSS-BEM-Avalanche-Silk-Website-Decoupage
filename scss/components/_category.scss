@@ -1,0 +1,12 @@
+.category {
+  font-size: map-get($font-size, xsmall);
+  font-weight: map-get($font-weight, bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category--bordered {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 1px 10px;
+}

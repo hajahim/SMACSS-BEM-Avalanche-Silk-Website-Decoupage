@@ -1,0 +1,24 @@
+.m-meteo {
+  .meteo-info {
+    font-size: map-get($font-size, normal);
+    display: flex;
+    padding-top: 7px;
+    &__image {
+      padding-top: 3px;
+    }
+    &__content {
+      line-height: map-get($line-height, extra-shrink);
+      padding-left: 15px; 
+      &__country {
+        font-family: $font-slave-bold;
+        font-size: map-get($font-size, normal);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      &__temperature {
+        padding-left: 6px;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+}

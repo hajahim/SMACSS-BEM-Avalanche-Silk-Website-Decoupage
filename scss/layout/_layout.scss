@@ -1,0 +1,121 @@
+.wrapper {
+  background-color: map-get($background-color, primary);
+  font-family: $font-master;
+}
+
+.l-header {
+  background-color: map-get($background-color, background-content);
+  height: 158px;
+  .header__banner {
+    padding-top: 25px;
+    height: 98px;
+    &__registration {
+      text-align: right;
+    }
+    &__logo {
+      .m-logo {
+        margin: auto;
+        .logo__image {
+          display: block;
+        }
+      }
+    }
+  }
+  .header__navigation {
+    font-family: $font-slave-bold;
+    border-top: 1px solid map-get($border-color, base-border-lighter);
+    text-transform: uppercase;
+    .navigation {
+      &__item {
+        &:first-child {
+          flex-grow: 0.54;
+          & > .link {
+            color: map-get($text-color, color-darkest);
+            text-align: left;
+          }
+          &:hover {
+            background-color: map-get($background-color, background-content);
+          }
+        }
+        &:last-child {
+          flex-grow: 0.66;
+          & > .link {
+            color: map-get($text-color, color-darkest);
+            text-align: right;
+          }
+          &:hover {
+            background-color: map-get($background-color, background-content);
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-footer {
+  margin-top: 20px;
+  .footer__information {
+    background-color: map-get($background-color, background-content);
+    border-bottom: 1px solid map-get($border-color, alternative-border);
+    padding: 52px 0;
+    height: 280px;
+    .footer__logo {
+      color: map-get($text-color, secondary);
+      font-size: map-get($font-size, medium);
+      &__image {
+        display: block;
+      }
+    }
+    .footer__navigation {
+      font-size: map-get($font-size, medium);
+      display: flex;
+      justify-content: space-between;
+      &__information {
+        flex: 1;
+      }
+      &__account {
+        flex: 2;
+        & > .navbar {
+          padding-left: 75px;
+        }
+      }
+      &__contact {
+        flex: 1;
+      }
+      .navigation {
+        font-family: $font-slave-regular;
+        &__item {
+          letter-spacing: 0px;
+          line-height: map-get($line-height, more-extended);
+          & > .link {
+            color: map-get($text-color, secondary);
+            font-size: map-get($font-size, medium);
+            padding-bottom: 0;
+            &:hover {
+              color: map-get($text-color, primary);
+            }
+          }
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+  .footer__copyright {
+    &__text {
+      font-size: map-get($font-size, normal);
+      padding: 13px 0;
+    }
+  }
+}
+
+.box {
+  margin: auto;
+  width: 980px;
+}
+
+.box--large {
+  margin: auto;
+  width: 1200px;
+}

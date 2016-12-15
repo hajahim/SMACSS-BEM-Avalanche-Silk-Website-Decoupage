@@ -1,0 +1,48 @@
+$primary-color: #333333;
+$primary-color-lighter: #d9d9d9;
+$secondary-color: #9b9b9c;
+$secondary-color-darker: #666666;
+$color-darkest: #000;
+
+$primary-background: #efefef;
+$background-content: #fff;
+$background-content-dark: #232324;
+
+$meta-blue: #3078c0;
+$meta-blue-ligther: #4c8ac7;
+$meta-orange: #e0a433;
+
+$base-border: #efefef;
+$base-border-light: $primary-color-lighter;
+$base-border-lighter: #eeeeef;
+$base-border-lightest: #eeeeee;
+$base-border-blue: #94b9dd;
+$alternative-border: #f8f8f8;
+
+$background-color: (
+  primary: $primary-background,
+  secondary-blue: $meta-blue,
+  secondary-blue-lighter: $meta-blue-ligther,
+  background-content: $background-content,
+  background-content-dark: $background-content-dark
+);
+
+$text-color: (
+  primary: $primary-color,
+  primary-light: $primary-color-lighter,
+  secondary: $secondary-color,
+  secondary-dark: $secondary-color-darker,
+  meta-blue: $meta-blue,
+  meta-orange: $meta-orange,
+  color-darkest: $color-darkest,
+  color-white: $background-content
+);
+
+$border-color: (
+  base-border: $base-border,
+  base-border-lighter: $base-border-lighter,
+  base-border-light: $base-border-light,
+  base-border-lightest: $base-border-lightest,
+  base-border-blue: $base-border-blue,
+  alternative-border: $alternative-border
+);

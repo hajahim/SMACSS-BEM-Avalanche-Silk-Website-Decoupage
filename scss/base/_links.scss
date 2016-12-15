@@ -1,0 +1,47 @@
+
+a {
+  text-decoration: none;
+  color: map-get($text-color, primary);
+  &:hover {
+
+  }
+  &:active {
+
+  }
+  &.disabled {
+
+  }
+  &[href^='javascript:']:after,
+  &[href^='#']:after {
+    @include media(print) {
+      content: '';
+    }
+  }
+}
+
+.link {
+  font-size: map-get($font-size, normal);
+  text-align: center;
+  & > .icon {
+    padding-right: 5px; 
+  }
+  &--primary {
+    color: map-get($text-color, secondary); 
+  }
+  &--secondary {
+    color: map-get($text-color, color-white);
+  }
+  &--dark {
+    color: map-get($text-color, primary);
+  }
+  &--blue {
+    color: map-get($text-color, meta-blue);
+  }
+}
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

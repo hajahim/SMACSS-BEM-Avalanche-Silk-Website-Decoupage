@@ -1,0 +1,41 @@
+.m-banner {
+  color: map-get($text-color, color-white);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  .banner {
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &__content {
+        text-align: center;
+        padding: 27px;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        justify-content: inherit;
+        width: 100%;
+        &__title {
+          font-family: $font-fantasy;
+          font-size: map-get($font-size, xlargest);
+          padding-bottom: 18px;
+        }
+        &__text {
+          font-size: map-get($font-size, xlarger);
+          line-height: map-get($line-height, super-extended);
+          padding: 0 240px 20px 240px;
+        }
+      }
+      &__category {
+        position: absolute;
+        padding: 27px;
+      }
+      &__dots {
+        position: absolute;
+        bottom: 0;
+        padding: 30px;
+      }
+    }
+  }
+}

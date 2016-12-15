@@ -1,0 +1,22 @@
+@include fontFace('Lato-Bold','../../fonts/Lato/Bold/Lato-Bold');
+@include fontFace('Lato-Regular','../../fonts/Lato/Regular/Lato-Regular');
+@include fontFace('OpenSans-Regular','../../fonts/Open_Sans/OpenSans-Regular');
+@include fontFace('PlayfairDisplay-Bold','../../fonts/Playfair_Display/Playfair-Display-Bold');
+
+$primary-sans-font-family: "OpenSans-Regular", Arial, sans-serif !default;
+
+$secondary-sans-font-family-regular: "Lato-Regular", Arial, sans-serif !default;
+
+$secondary-sans-font-family-bold: "Lato-Bold", Arial, sans-serif !default;
+
+$serif-font-family: "PlayfairDisplay-Bold", "Times New Roman", Times, serif !default;
+
+// Use the fons in to project
+
+$font-master: $primary-sans-font-family !default;
+
+$font-slave-regular: $secondary-sans-font-family-regular;
+
+$font-slave-bold: $secondary-sans-font-family-bold;
+
+$font-fantasy: $serif-font-family;

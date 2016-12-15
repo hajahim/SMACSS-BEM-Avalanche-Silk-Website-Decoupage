@@ -1,0 +1,122 @@
+// card mixin
+mixin card(className, article)
+  article(class=className)
+    a.card__image(href="#")
+      if article.img_dark
+        img.img.img-responsive(src=srcImage+article.image, alt="alternative text", height=article.image_height, width=article.image_width)
+      else 
+        img.img-responsive(src=srcImage+article.image, alt="alternative text", height=article.image_height, width=article.image_width)
+    .card__body 
+
+      if article.category_tag
+        .card__category
+          if article.category_bordered
+            span.category.category--bordered= article.category
+          else 
+            span.category= article.category
+
+      h2.card__body__title
+        a.card__body__title__link(href="#")
+          = article.title
+      p.card__body__text= article.text
+
+      if article.card_author
+        .card__author
+          a.card__author__image(href="#")
+            img(class="avatar" src=srcImage+article.card_author.authorImage alt="alternative text")
+          .card__author__content
+            h3.card__author__content__name
+              a(href="#")= article.card_author.authorName
+            time.date.card__author__content__date(datetime="8 December 2016")= article.card_author.date+" ago"
+
+    if article.card_meta
+      ul.card__meta
+        li.card__meta__item
+          a.link.link--primary(href="#")
+            span.icon.icon--like
+            = article.card_meta.like
+        li.card__meta__item
+          a.link.link--primary(href="#")
+            span.icon.icon--comments
+            = article.card_meta.comment
+        li.card__meta__item
+          time.date(datetime="8 December 2016")
+            span.icon.icon--clock
+            = article.card_meta.date+" ago "
+
+    if article.readmore
+      .card__button
+        +generateButton("btn--primary btn--rounded", "read more", article.readmore_link)
+
+// button mixin
+mixin generateButton(className, text, link)
+  a.btn.btn--large(href=link class=className)= text
+// news mixin
+mixin news(category, listItems)
+  .news
+    h3.news__info= category
+    .news__list
+      for item in listItems
+        +newsItem(item)
+    a.news__link.link.link--secondary(href="#") all news
+
+mixin newsItem(item)
+  .news__list__item
+    if item.image
+      a.news__list__item__image(href="#")
+        img.img-responsive(src="../../images/"+item.image alt="alternative text" height=item.image_height width=item.image_width) 
+    .news__list__item__body
+      time.date(datetime="8 December 2016").news__list__item__body__date= item.date+" ago"
+      h3.news__list__item__body__title
+        a.news__list__item__body__title__link(href="#")
+          = item.title
+// slider mixin
+mixin banner(slideList)
+  .banner
+    for item in slideList
+      +bannerItem(item)
+mixin bannerItem(sliderItem)
+  .banner__item
+    .banner__item__image
+      img.img.img-responsive(src=srcImage+sliderItem.image alt="alternative text" height=sliderItem.image_height width=sliderItem.image_width)
+    .banner__item__category
+      span.category.category--bordered food & drink
+    .banner__item__content
+      h1.banner__item__content__title= sliderItem.title
+      p.banner__item__content__text= sliderItem.text
+      .banner__item__content__button
+        a.btn.btn--default.btn--extra-large.btn--rounded(href="#") read more    
+    .banner__item__dots
+      p Dots
+// video mixin
+mixin video(videoItem)
+  .video
+    .video__object
+      a(href="#")
+        .video-tag
+          span.icon.icon--video
+        img.img-responsive(src=srcImage+videoItem.link alt="alternative text" height=videoItem.video_height width=videoItem.video_width)
+    .video__body
+      h3.video__body__title
+        a.video__body__title__link(href="#")
+          = videoItem.title
+      time.date(datetime="8 December 2016").video__body__description= videoItem.duration
+//mixin information 
+mixin meteo(information)
+  .meteo-info
+    .meteo-info__image
+      img.img-responsive(src=srcImage+information.image alt="alternative text" height=information.image_height width=information.image_width)
+    .meteo-info__content
+      p.meteo-info__content__country
+        = information.country
+        span.meteo-info__content__temperature= information.temperature
+      a.link.link--primary.meteo-info__content__date= information.date
+//mixin navigation menu
+mixin navigation(menuList)
+  nav.navbar
+    ul.navigation
+      for item in menuList
+        li.navigation__item
+          a.link.link--dark(href="#")!= item
+    
+
